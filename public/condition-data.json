@@ -1,0 +1,43 @@
+const conditionData = [
+        {
+            options: [
+                {
+                    id: 21,
+                    text: 'Equals', 
+                    value: '=='
+                },
+                {
+                    id: 22, 
+                    text: 'Does not equal', 
+                    value: '!='
+                },
+                {
+                    id: 23, 
+                    text:'Like', 
+                    value: 'like'
+                },
+                {
+                    id: 34,
+                    text:'Not like',
+                    value: 'not like'
+                }, 
+                {
+                    id: 67,
+                    text: 'Is Empty',
+                    value: 'is empty'
+                }, 
+                {
+                    id: 78, 
+                    text: 'Is', 
+                    value: 'is'
+                },
+                {
+                    id: 88, 
+                    text:'Is not', 
+                    value: 'is not'
+                }
+            ]
+        }
+];
+
+export default conditionData;

@@ -1,0 +1,28 @@
+   const criteriaData = [
+       {
+           options: [
+               {
+                   id: 55,
+                   text:'lll1',
+                   value: 'lll1'
+               }, 
+               {
+                   id: 66,
+                   text: 'llll2',
+                   value: 'lll2'
+               },
+               {
+                   id: 77,
+                   text: 'llll434',
+                   value: 'llll434'
+               },
+               {
+                   id: 88,
+                   text: 'llll5454',
+                   value: 'llll5454'
+               }
+           ]
+       }
+   ];
+
+export default criteriaData;

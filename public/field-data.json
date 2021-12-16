@@ -1,0 +1,54 @@
+    const fieldData = [
+        {
+            optgroup: 'PREDICTION',
+            id: '111',
+            options: [
+                {
+                    id: 11, 
+                    text: 'Theme', 
+                    value:'theme'
+                },
+                {
+                    id: 22, 
+                    text:'Sub-theme', 
+                    value: 'sub-theme'
+                },
+                {
+                    id:33,
+                    text:'Reason',
+                    value:'reason'
+                },
+                {
+                    id: 44,
+                    text: 'Language',
+                    value: 'language'
+                },
+                {
+                    id:55,
+                    text:'Source',
+                    value: 'source'
+                },
+                {
+                    id: 66, 
+                    text: 'Rating', 
+                    value: 'rating'
+                },
+                {
+                    id: 77,
+                    text:'Time Period', 
+                    value: 'time period'
+                }
+                ]
+        },
+        {
+            optgroup: 'COMMON',
+            id: '112',
+            options: [{
+                    id:78,
+                    text:'Customer ID',
+                    value: 'customer id'
+            }]
+        }
+    ];
+
+export default fieldData;
