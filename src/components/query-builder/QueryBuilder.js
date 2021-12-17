@@ -35,7 +35,6 @@ const QueryBuilder = () => {
     }
     
     const handleCancelClick = (e) => {
-        console.log("canceliing quuuuuerrrrrrrryyyyyyyy!!!!!")
         // e.preventDefault();
         e.stopPropagation();
         cancelQuery();
