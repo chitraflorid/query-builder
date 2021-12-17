@@ -1,7 +1,23 @@
+
 export const queryReducer = (state, action) => {
   switch (action.type) {
-    case 'SEND_QUERY_REQEST':
-          break;
+    case 'SUBMIT_QUERY_RESPONSE': {
+        
+        // update the API response to UI 
+    }
+    break;
+    
+    case 'CANCEL_QUERY': {
+        return {
+            query: '',
+            groupFilter: {
+                id: state.groupFilter.id,
+                filters: [],
+                conjunctor: state.groupFilter.conjunctor
+            }
+        };
+    }
+          
     case'ADD_FILTER': {
         const newState = {
             groupFilter: addFilter(action, state.groupFilter)
@@ -51,7 +67,7 @@ export const queryReducer = (state, action) => {
         }
         
         newState.query = updateQuery(
-                            newState.groupFilter.filters,                         newState.groupFilter.conjunctor
+                            newState.groupFilter.filters,                     newState.groupFilter.conjunctor
                          );
         
         return newState;
