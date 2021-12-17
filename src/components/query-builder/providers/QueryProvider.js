@@ -63,12 +63,12 @@ const QueryProvider = ({ children }) => {
         });
     };
     
-    const submitQuery = () => {
-        
+    const updateQuerySubmit = (resp) => {
+        dispatch({type: 'SUBMIT_QUERY_RESPONSE', response: resp});
     };
     
     const cancelQuery = () => {
-        
+        dispatch({type: 'CANCEL_QUERY'});
     };
     
     const setQueryConjunctor = (grpFilterId, conjunctorOp) => {
@@ -89,7 +89,7 @@ const QueryProvider = ({ children }) => {
                 removeFilter,
                 updateQuery,
                 addNewGroupFilter,
-                submitQuery,
+                updateQuerySubmit,
                 cancelQuery,
                 setQueryConjunctor,
             }}
