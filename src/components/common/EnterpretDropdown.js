@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {memo, useState } from "react";
 
 const DEFAULT_CONFIG_OPTIONS = {
   multiple: false,
@@ -78,4 +78,5 @@ const EnterpretDropdown = (props) => {
   );
 };
 
+//const isEq = (prev, next) => prev.data.length === next.data.length;
 export default EnterpretDropdown;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, {memo} from "react";
 
 const EnterpretButton = (({type='button', children, id, className, handleClick}) => {
   return (
@@ -6,5 +6,5 @@ const EnterpretButton = (({type='button', children, id, className, handleClick})
   );  
 });
 
-
-export default EnterpretButton;
+const isEq = (prev, next) => prev.id === next.id;
+export default memo(EnterpretButton, isEq);
