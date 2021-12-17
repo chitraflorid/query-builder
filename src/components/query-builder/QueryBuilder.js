@@ -29,13 +29,11 @@ const QueryBuilder = () => {
             }
         };
         postData();
-
-        
         console.log("submit query!");        
-    }
+    };
     
     const handleCancelClick = (e) => {
-        // e.preventDefault();
+        e.preventDefault();
         e.stopPropagation();
         cancelQuery();
     };
@@ -44,7 +42,9 @@ const QueryBuilder = () => {
         <EnterpretModal container={div}>
             <QueryResult query={query} />
             <QueryGroupFilter grpFilter={groupFilter} />
-            <QueryBuilderFooter handleCancel={handleCancelClick} handleSubmit={handleFinishBtnClick} />
+            <QueryBuilderFooter
+                id={groupFilter.id}
+                handleCancel={handleCancelClick}                           handleSubmit={handleFinishBtnClick} />
         </EnterpretModal>
     );
 };

@@ -1,14 +1,16 @@
-import React, {useContext} from 'react';
+import React, {memo, useContext} from 'react';
 import QueryConjunctor from './QueryConjunctor';
 import QueryFilterItem from './QueryFilterItem';
 import QueryAddFilterButton from './QueryAddFilterButton';
 import QueryAddNewGroupFilterButton from './QueryAddNewGroupFilterButton';
 
 import { QueryContext } from './context/queryContext';
-
+//const isEqual = (prevProps, nextProps) => {
+//   return prevProps.grpFilter.id === nextProps.grpFilter.id && 
+//          prevProps.grpFilter.filters.length === nextProps.grpFilter.filters.length && 
+//          prevProps.grpFilter.conjunctor === nextProps.grpFilter.conjunctor;
+//}
 const QueryGroupFilter = ({ grpFilter, className = ''}) => {
-    console.log("@QueryGroupFilterEditor!!");
-    console.log(grpFilter);    
     const { 
         addFilter,
         updateFilter,
@@ -21,7 +23,6 @@ const QueryGroupFilter = ({ grpFilter, className = ''}) => {
     let { filters, id, conjunctor } = grpFilter;
     
     const handleAddNewGroupBtnClick = (e) => {
-      console.log("add new GRoup Filter Btn Clicked!!"); 
       addNewGroupFilter(id);
     };
     
@@ -89,7 +90,7 @@ const QueryGroupFilter = ({ grpFilter, className = ''}) => {
                         grpId={id}
                         handleClick={handleAddNewGroupBtnClick} />
                 </li>
-</ul>
+            </ul>
     );
     
 };

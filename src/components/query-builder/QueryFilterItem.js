@@ -1,10 +1,17 @@
-import React from 'react';
+import React, {memo} from 'react';
 import EnterpretDropdown from '../common/EnterpretDropdown';
 import EnterpretButton from '../common/EnterpretButton';
 
+const isEqual = (prevProps, nextProps) => {
+  return prevProps.condition === nextProps.condition &&
+         prevProps.field === nextProps.field &&
+         prevProps.value === prevProps.value ||
+         prevProps.filterId === nextProps.filterId;
+      
+}
 
 const QueryFilterItem = ({parentGrpFilterId, filterId, filterIndx, field, condition, value, handleFilterChange, handleRemoveFilterBtnClick, handleAddFilterBtnClick}) => {
-    const fieldData = [
+        const fieldData = [
         {
             optgroup: 'PREDICTION',
             id: '111',
@@ -174,7 +181,9 @@ const QueryFilterItem = ({parentGrpFilterId, filterId, filterIndx, field, condit
     );
 };
 
-export default QueryFilterItem;
+
+
+export default memo(QueryFilterItem, isEqual);
 
  
  

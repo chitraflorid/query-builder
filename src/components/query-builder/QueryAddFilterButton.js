@@ -1,5 +1,9 @@
-import React from 'react';
+import React, {memo} from 'react';
 import EnterpretButton from '../common/EnterpretButton';
+
+const isEq = (next, prev) => {
+    return next.grpId === prev.grpId;
+};
 
 const QueryAddFilterButton = ({grpId, handleClick}) => {
     return (
@@ -13,7 +17,7 @@ const QueryAddFilterButton = ({grpId, handleClick}) => {
     )
 };
 
-export default QueryAddFilterButton;
+export default memo(QueryAddFilterButton, isEq);
 
 
 

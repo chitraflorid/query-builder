@@ -2,10 +2,10 @@ import React from 'react';
 import EnterpretButton from '../common/EnterpretButton';
 
 const QueryBuilderFooter = ({handleCancel, handleSubmit}) => {
+    console.log("rendering QB footer!!!");
     return (
         <div className='query-footer'>
             <EnterpretButton 
-                key={'root-cancel'}
                 type={'reset'}
                 className="add-btn"
                 handleClick={handleCancel}
@@ -13,7 +13,6 @@ const QueryBuilderFooter = ({handleCancel, handleSubmit}) => {
                 Back
             </EnterpretButton>
             <EnterpretButton 
-                key={'root-submit'}
                 type={'submit'}
                 className="add-btn"
                 handleClick={handleSubmit}
